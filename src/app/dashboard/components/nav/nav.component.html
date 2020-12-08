@@ -6,16 +6,16 @@
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <div>
-        <a mat-list-item routerLink="dashboard" routerLinkActive="active"> <mat-icon>home</mat-icon> Home</a>
-        <a mat-list-item routerLink="profile" routerLinkActive="active"> <mat-icon>person</mat-icon> Profile</a>
+        <a mat-list-item routerLink="dashboard" routerLinkActive="active" > <mat-icon>home</mat-icon> Home</a>
+        <a mat-list-item routerLink="profile" routerLinkActive="active" > <mat-icon>person</mat-icon> Profile</a>
       </div>
       <div class="logout">
-        <a mat-list-item routerLink=""><mat-icon>login</mat-icon>Logout</a>
+        <a mat-list-item routerLink="/" (click)="LogOut()"><mat-icon>login</mat-icon>Log Out</a>
       </div>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar>
+    <mat-toolbar class="toolbar">
       <button
         type="button"
         aria-label="Toggle sidenav"

@@ -24,6 +24,9 @@ mat-toolbar{
       color: #5F5F6F;
     }
 }
+.toolbar {
+  margin-bottom: 20px;
+}
 mat-sidenav{
   background-color: #1C1C24;
     a{
@@ -37,8 +40,11 @@ mat-nav-list a.active{
  color: #5F5F6F;
 }
 mat-sidenav-container{
-  background-color: #1C1C24;
+  background-color: #16161A;
 }
-mat-nav-list a {
+mat-nav-list  a {
   border-bottom: 1px solid #5F5F6F;
+}
+button {
+outline: none;
 }
