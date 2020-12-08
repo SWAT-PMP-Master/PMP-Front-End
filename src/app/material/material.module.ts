@@ -19,7 +19,7 @@ import { MatCardModule } from '@angular/material/card';
     MatIconModule,
     MatListModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
   ],
   exports: [
     MatSidenavModule,
@@ -29,5 +29,6 @@ import { MatCardModule } from '@angular/material/card';
     MatButtonModule,
     MatCardModule
   ]
+  ],
 })
-export class MaterialModule { }
+export class MaterialModule {}
