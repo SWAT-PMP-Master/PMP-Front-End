@@ -11,17 +11,18 @@ const routes: Routes = [
       {
         path: '',
         redirectTo: 'home',
-        pathMatch: 'full'
+        pathMatch: 'full',
       },
       {
         path: '',
-        loadChildren: () => import ('./home/home.module').then(m => m.HomeModule)
+        loadChildren: () =>
+          import('./home/home.module').then((m) => m.HomeModule),
       },
-    ]
+    ],
   },
   {
     path: 'auth',
-    loadChildren: () => import ('./auth/auth.module').then(m => m.AuthModule)
+    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
   },
   {
     path: 'dashboard',
@@ -34,9 +35,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    preloadingStrategy: PreloadAllModules, useHash: true
-  })],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes, {
+      preloadingStrategy: PreloadAllModules,
+      useHash: true,
+    }),
+  ],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
