@@ -1,5 +1,6 @@
 import { core } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 declare var Trello;
 
@@ -9,9 +10,13 @@ declare var Trello;
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
+
+  successLogin(): void {
+    this.router.navigateByUrl('/');
+  }
 
   loginTrello(): void {
     Trello.authorize({
@@ -22,7 +27,7 @@ export class LoginComponent implements OnInit {
         write: 'true',
       },
       expiration: 'never',
-      success: console.log('Successful authentication'),
+      success: this.successLogin(),
       error: console.log('Failed authentication'),
     });
   }
