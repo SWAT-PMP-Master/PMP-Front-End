@@ -1,0 +1,12 @@
+<div class="team">
+  <h1>Our Team</h1>
+  <mat-card>
+    <mat-card-content *ngFor = "let developer of developers">
+      <img mat-card-image [src]="developer.image" alt="development team">
+      <mat-card-title>{{ developer.name }}</mat-card-title>
+      <mat-card-subtitle>{{ developer.title}} </mat-card-subtitle>
+      <a class="twitter__label" [href] ="developer.link" target="_blank">{{ developer.twitter }}</a>
+    </mat-card-content>
+  </mat-card>
+</div>
+
