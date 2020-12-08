@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Icon } from '../description-section/description-section.model';
+import { Icon } from '../description/description.model';
 
 @Component({
   selector: 'app-description-section',
-  templateUrl: './description-section.component.html',
-  styleUrls: ['./description-section.component.scss']
+  templateUrl: './description.component.html',
+  styleUrls: ['./description.component.scss']
 })
-export class DescriptionSectionComponent implements OnInit {
+export class DescriptionComponent implements OnInit {
 
   icons: Icon[] = [
     {
