@@ -1,0 +1,35 @@
+.container-login {
+  background-color: #16161a;
+  width: 100%;
+  height: calc(100vh - (56px + 56px));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.img-login {
+  display: none;
+}
+.form-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-login_card {
+  background-color: #1c1c24;
+  width: 270px;
+  height: 343px;
+  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  h1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  button {
+    background-color: #4447e2;
+    width: 123px;
+    height: 35px;
+  }
+}
