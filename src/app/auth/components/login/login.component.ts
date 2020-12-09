@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   successLogin(): void {
-    this.router.navigateByUrl('/');
+    this.router.navigate(['/dashboard/dashboard']);
   }
 
   loginTrello(): void {
