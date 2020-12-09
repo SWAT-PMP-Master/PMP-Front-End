@@ -27,8 +27,7 @@ import { MatCardModule } from '@angular/material/card';
     MatIconModule,
     MatListModule,
     MatButtonModule,
-    MatCardModule
-  ]
+    MatCardModule,
   ],
 })
 export class MaterialModule {}
