@@ -19,6 +19,6 @@ export class NavComponent {
   constructor(private breakpointObserver: BreakpointObserver) {}
 
   LogOut(): void{
-    console.log('cerro');
+    localStorage.clear();
   }
 }
