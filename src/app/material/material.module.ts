@@ -29,6 +29,5 @@ import { MatCardModule } from '@angular/material/card';
     MatButtonModule,
     MatCardModule
   ]
-  ],
 })
 export class MaterialModule {}
