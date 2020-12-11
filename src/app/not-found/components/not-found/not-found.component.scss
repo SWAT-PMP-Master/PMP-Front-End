@@ -1,0 +1,30 @@
+.not__container{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  color: #4447E2;
+  background-image: url("/assets/images/nmax.png");
+  align-items: center;
+  text-align: center;
+  //background-color: #1C1C24;
+
+  &--info{
+    flex: 1;
+    width: 50%;
+
+    h1{
+      
+      font-size: 20em;
+    }
+    p{
+      font-size: 40px;
+      line-height: 50px;
+      padding-top: 2.5em;
+    }
+  }
+
+  &--image{
+    width: 50%;
+  }
+}
+
