@@ -17,10 +17,5 @@ export class AuthService {
         'trello_token'
       )}`
     );
-    // .pipe(
-    //   tap((data) => {
-    //     localStorage.setItem('user', JSON.stringify(data));
-    //   })
-    // );
   }
 }
