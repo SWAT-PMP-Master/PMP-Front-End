@@ -1,30 +1,113 @@
+@-moz-keyframes rocket-movement { 100% {-moz-transform: translate(1200px,-600px);} }
+@-webkit-keyframes rocket-movement {100% {-webkit-transform: translate(1200px,-600px); } }
+@keyframes rocket-movement { 100% {transform: translate(1200px,-600px);} }
+@-moz-keyframes spin-earth { 100% { -moz-transform: rotate(-360deg); transition: transform 1s;  } }
+@-webkit-keyframes spin-earth { 100% { -webkit-transform: rotate(-360deg); transition: transform 1s;  } }
+@keyframes spin-earth{ 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); transition: transform 1s; } }
+
+@-moz-keyframes move-astronaut {
+    100% { -moz-transform: translate(-160px, -160px);}
+}
+@-webkit-keyframes move-astronaut {
+    100% { -webkit-transform: translate(-160px, -160px);}
+}
+@keyframes move-astronaut{
+    100% { -webkit-transform: translate(-160px, -160px); transform:translate(-160px, -160px); }
+}
+@-moz-keyframes rotate-astronaut {
+    100% { -moz-transform: rotate(-720deg);}
+}
+@-webkit-keyframes rotate-astronaut {
+    100% { -webkit-transform: rotate(-720deg);}
+}
+@keyframes rotate-astronaut{
+    100% { -webkit-transform: rotate(-720deg); transform:rotate(-720deg); }
+}
+
 .not__container{
-  display: flex;
-  height: 100%;
-  width: 100%;
-  color: #4447E2;
-  background-image: url("/assets/images/nmax.png");
-  align-items: center;
-  text-align: center;
-  //background-color: #1C1C24;
+  background: url(http://salehriaz.com/404Page/img/overlay_stars.svg) #16161A;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 
-  &--info{
-    flex: 1;
-    width: 50%;
+    &--info{
+      width: 100%;
+      color: #4447E2;
+      text-align: center;
 
-    h1{
-      
-      font-size: 20em;
+      h1{
+        margin: .5em;
+        font-size: 12em;
+        font-weight: bold;
+      }
+      p{
+        color: #2CB67D;
+        font-size: 2em;
+        margin: 1em;
+      }
     }
-    p{
-      font-size: 40px;
-      line-height: 50px;
-      padding-top: 2.5em;
-    }
-  }
+}
 
-  &--image{
-    width: 50%;
+button{
+  background-color: #4447E2;
+  a{
+    margin: 10px;
+    color: #ffff;
+    text-decoration: none;
   }
 }
 
+.objects img{
+    z-index: 90;
+    pointer-events: none;
+}
+
+.object_rocket{
+    z-index: 95;
+    position: absolute;
+    transform: translateX(-50px);
+    top: 75%;
+    pointer-events: none;
+    animation: rocket-movement 200s linear infinite both running;
+}
+
+.object_earth{
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    z-index: 90;
+}
+
+.object_moon{
+    position: absolute;
+    top: 12%;
+    left: 25%;
+}
+
+.object_astronaut{
+    animation: rotate-astronaut 200s infinite linear both alternate;
+}
+
+.box_astronaut{
+    z-index: 110 !important;
+    position: absolute;
+    top: 43%;
+    right: 2%;
+    will-change: transform;
+    animation: move-astronaut 50s infinite linear both alternate;
+}
+
+// --------media queries-------------
+@media (min-width: 900px){
+  .not__container{
+    &--info{
+      p{
+        font-size: 3em;
+        margin: 1em;
+        font-weight: bold;
+      }
+    }
+  }
+}
