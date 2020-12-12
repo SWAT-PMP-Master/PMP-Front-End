@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>
+                        Pmp project board <span>#22345</span>
+                    </mat-card-title>
+                    <mat-card-subtitle>
+                        Initial Date: 11/22/20 || End Date: 11/22/20
+                    </mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <h3>Description:</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptas cupiditate id distinctio optio quo rem, ullam laboriosam excepturi, veniam eligendi, culpa nostrum repellat? Temporibus vero commodi libero culpa dolor.</p>
+                    <p>Number of cards created in trello :  34</p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-12 col-lg-6">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>
+                        Project status
+                    </mat-card-title>
+                </mat-card-header>
+            </mat-card>
+        </div>
+        <div class="col-12 col-lg-6">
+            <h3 class="title__table">Members associated with this board</h3>
+            <table class="tables">
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Name</th>
+                        <th>Progress</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let users of user">
+                        <td> {{users.task}} </td>
+                        <td> {{users.name}} </td>
+                        <td> {{users.progress}} </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-12 col-lg-6">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>
+                    </mat-card-title>
+                </mat-card-header>
+            </mat-card>
+        </div>
+    </div>
+</div>

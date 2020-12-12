@@ -1,0 +1,19 @@
+mat-toolbar {
+  background-color: #1C1C24;
+    a{
+      margin: 10px;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    h1{
+      color: #ffffff;
+    }
+    button{
+      background-color: #4447E2;
+    }
+}
+.toolbar__row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
