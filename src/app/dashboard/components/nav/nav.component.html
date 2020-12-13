@@ -13,7 +13,7 @@
         <a mat-list-item routerLink="dashboard" routerLinkActive="active">
           <mat-icon>home</mat-icon> Home</a
         >
-        <a mat-list-item routerLink="profile" routerLinkActive="active">
+        <a mat-list-item [routerLink]="['profile',user?.body.user.Nickname]" routerLinkActive="active">
           <mat-icon>person</mat-icon> Profile</a
         >
       </div>
