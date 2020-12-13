@@ -36,10 +36,11 @@
 
 @media (min-width: 650px) {
   .container-login {
-    flex-wrap: nowrap;
     width: 100vw;
     justify-content: space-between;
     margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .img-login {
