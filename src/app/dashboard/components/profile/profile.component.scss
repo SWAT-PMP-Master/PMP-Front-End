@@ -1,3 +1,24 @@
-p {
+mat-card {
+    margin-bottom: 10px;
+    background-color: #1C1C24;
     color: #ffffff;
+        mat-card-title{
+            font-weight: bold;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+        mat-card-content {
+            display: flex;
+            align-items: center;
+                img{
+                    width: 200px;
+                    height: 200px;
+                }
+        }
+}
+.info__profile{
+    margin-left: 15px;
+}
+.rol {
+    color: #4447E2;
 }

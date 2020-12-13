@@ -7,7 +7,7 @@
     <mat-nav-list>
       <div>
         <a mat-list-item routerLink="dashboard" routerLinkActive="active" > <mat-icon>home</mat-icon> Home</a>
-        <a mat-list-item routerLink="profile" routerLinkActive="active" > <mat-icon>person</mat-icon> Profile</a>
+        <a mat-list-item [routerLink]="['profile',user?.body.user.Nickname]" routerLinkActive="active" > <mat-icon>person</mat-icon> Profile</a>
       </div>
       <div class="logout">
         <a mat-list-item routerLink="/" (click)="LogOut()"><mat-icon>login</mat-icon>Log Out</a>

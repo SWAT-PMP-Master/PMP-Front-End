@@ -35,17 +35,15 @@ export class DashboardComponent implements OnInit {
     },
   ];
 
-  body: any;
 
-  constructor(private authService: AuthService) {}
+constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
     this.login();
-  }
+}
 
   login(): void {
     this.authService.singIn().subscribe((data) => {
-      console.log(data);
       localStorage.setItem('user', JSON.stringify(data));
     });
   }
