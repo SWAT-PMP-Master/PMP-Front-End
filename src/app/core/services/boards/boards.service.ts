@@ -31,4 +31,11 @@ export class BoardsService {
       this.httpOptions
     );
   }
+
+  getBoardMembers(id: string): Observable<any> {
+    return this.http.get(
+      `${environment.URL_API}boards/members/${id}`,
+      this.httpOptions
+    );
+  }
 }
