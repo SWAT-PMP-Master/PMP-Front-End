@@ -22,9 +22,14 @@
         <mat-card>
             <div class="container">
                 <div class="row">
-                    <h2 class="col-12">My Projects</h2>
-                    <div class="col-6">1</div>
-                    <div class="col-6">2</div>
+                    <h2 class="col-12 text-center">My Projects</h2>
+                    <div class="col-12">
+                          <mat-list *ngFor="let board of boards">
+                            <mat-list-item> {{ board.name }} </mat-list-item>
+                            <button mat-raised-button><a [routerLink]="['/dashboard/dashboard', board.id]">Ver Detalle</a></button>
+                            <mat-divider></mat-divider>
+                          </mat-list>
+                    </div>
                 </div>
             </div>
         </mat-card>

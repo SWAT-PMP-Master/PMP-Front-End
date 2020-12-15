@@ -11,11 +11,11 @@ const routes: Routes = [
     component: NavComponent,
     children: [
       {
-        path: 'dashboard',
+        path: 'dashboard/:id',
         component: DashboardComponent
       },
       {
-        path: 'profile/:Nickname',
+        path: 'profile',
         component: ProfileComponent
       }
     ]
