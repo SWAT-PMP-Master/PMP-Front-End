@@ -1,40 +1,45 @@
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <mat-card class="col-12 col-lg-6">
-                <mat-card-header>
-                    <mat-card-title>
-                        My profile
-                    </mat-card-title>
-                </mat-card-header>
-                <mat-card-content>
-                    <img src="./../../../../assets/img-profile/perfil-sin-fondo.png" alt="">
-                    <div class="info__profile">
-                        <h3 class="rol">{{user?.body.user.rol}}</h3>
-                        <h3>{{user?.body.user.Nickname}}</h3>
-                        <h3>{{user?.body.user.email}}</h3>
-                    </div>
-                </mat-card-content>
-            </mat-card>
-        </div>
-    </div>
+<div class="container" *ngIf="user.body">
+  <div class="row">
     <div class="col-12">
-        <mat-card>
-            <div class="container">
-                <div class="row">
-                    <h2 class="col-12 text-center">My Projects</h2>
-                    <div class="col-12">
-                          <mat-list *ngFor="let board of boards">
-                            <mat-list-item> {{ board.name }} </mat-list-item>
-                            <button mat-raised-button><a [routerLink]="['/dashboard/dashboard', board.id]">Ver Detalle</a></button>
-                            <mat-divider></mat-divider>
-                          </mat-list>
-                    </div>
-                </div>
-            </div>
-        </mat-card>
+      <mat-card class="col-12 col-lg-6">
+        <mat-card-header>
+          <mat-card-title> My profile </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <img
+            src="./../../../../assets/img-profile/perfil-sin-fondo.png"
+            alt=""
+          />
+          <div class="info__profile">
+            <h3 class="rol">{{ user.body.user.rol }}</h3>
+            <h3>{{ user.body.user.Nickname }}</h3>
+            <h3>{{ user.body.user.email }}</h3>
+          </div>
+        </mat-card-content>
+      </mat-card>
     </div>
+  </div>
+  <div class="col-12">
+    <mat-card>
+      <div class="container">
+        <div class="row">
+          <h2 class="col-12 text-center">My Projects</h2>
+          <div class="col-12">
+            <mat-list *ngFor="let board of boards">
+              <mat-list-item> {{ board.name }} </mat-list-item>
+              <button mat-raised-button>
+                <a [routerLink]="['/dashboard/dashboard', board.id]"
+                  >Ver Detalle</a
+                >
+              </button>
+              <mat-divider></mat-divider>
+            </mat-list>
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </div>
 </div>
-<ngx-spinner color="#4447E2" type = "ball-scale-ripple-multiple">
-    <p style="font-size: 20px; color: white">Loading...</p>
+<ngx-spinner color="#4447E2" type="ball-scale-ripple-multiple">
+  <p style="font-size: 20px; color: white">Loading...</p>
 </ngx-spinner>

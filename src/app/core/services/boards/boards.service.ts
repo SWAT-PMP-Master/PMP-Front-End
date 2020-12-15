@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class BoardsService {
-  user = JSON.parse(localStorage.getItem('user'));
+  user: any = JSON.parse(localStorage.getItem('user'));
 
   httpOptions = {
     headers: new HttpHeaders({
