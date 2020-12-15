@@ -22,3 +22,17 @@ mat-card {
 .rol {
     color: #4447E2;
 }
+mat-list {
+    display: flex;
+    justify-content: space-between;
+    mat-list-item{
+        color: #ffffff;
+    }
+    button {
+        background-color: #4447E2;
+        outline: none;
+            a{
+                color: #ffffff;
+            }
+    }
+}
