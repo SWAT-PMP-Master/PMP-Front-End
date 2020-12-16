@@ -38,4 +38,11 @@ export class BoardsService {
       this.httpOptions
     );
   }
+
+  getStatisticsBoard(id: string): Observable<any> {
+    return this.http.get(
+      `${environment.URL_API}statistics/1/${id}`,
+      this.httpOptions
+    );
+  }
 }

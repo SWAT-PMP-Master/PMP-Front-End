@@ -12,6 +12,34 @@ export class DashboardComponent implements OnInit {
   id: string;
   user: any;
   board: any;
+  statistics: any;
+
+  single = [
+    {
+      name: 'Germany',
+      value: 8940000,
+    },
+    {
+      name: 'USA',
+      value: 5000000,
+    },
+    {
+      name: 'France',
+      value: 7200000,
+    },
+    {
+      name: 'UK',
+      value: 6200000,
+    },
+  ];
+  view: any[] = [700, 400];
+  colorScheme = {
+    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA'],
+  };
+  gradient = true;
+  showLegend = true;
+  showLabels = true;
+  isDoughnut = false;
 
   constructor(
     private boardsService: BoardsService,
@@ -27,6 +55,12 @@ export class DashboardComponent implements OnInit {
       this.boardsService.getBoardMembers(this.id).subscribe((users: any) => {
         this.user = users;
       });
+      this.boardsService
+        .getStatisticsBoard(this.id)
+        .subscribe((statistic: any) => {
+          this.statistics = statistic.body;
+          console.log(this.statistics);
+        });
     });
   }
 }

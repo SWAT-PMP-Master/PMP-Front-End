@@ -11,6 +11,7 @@ import { SharedModule } from './shared/shared.module';
 import { LayoutComponent } from './layout/layout.component';
 import { HomeModule } from './home/home.module';
 import { InterceptorService } from './interceptor.interceptor';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [AppComponent, LayoutComponent],
@@ -21,12 +22,15 @@ import { InterceptorService } from './interceptor.interceptor';
     SharedModule,
     HomeModule,
     HttpClientModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    NgxChartsModule,
   ],
   providers: [
     {
-      provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true
-    }
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorService,
+      multi: true,
+    },
   ],
   bootstrap: [AppComponent],
 })
