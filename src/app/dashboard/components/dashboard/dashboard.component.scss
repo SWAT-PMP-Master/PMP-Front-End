@@ -9,6 +9,9 @@ mat-card {
     color: #ffffff;
     margin-bottom: 20px;
   }
+  mat-card-content {
+    padding: 15px;
+  }
   span {
     border: 1px solid #4447e2;
     border-radius: 10px;
@@ -23,6 +26,7 @@ mat-card {
     color: #ffffff;
   }
 }
+
 h3 {
   color: #ffffff;
 }

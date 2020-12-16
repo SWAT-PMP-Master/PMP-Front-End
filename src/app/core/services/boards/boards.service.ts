@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class BoardsService {
-  user = JSON.parse(localStorage.getItem('user'));
+  user: any = JSON.parse(localStorage.getItem('user'));
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -28,6 +28,20 @@ export class BoardsService {
   getBoard(id: string): Observable<any> {
     return this.http.get(
       `${environment.URL_API}boards/${id}`,
+      this.httpOptions
+    );
+  }
+
+  getBoardMembers(id: string): Observable<any> {
+    return this.http.get(
+      `${environment.URL_API}boards/members/${id}`,
+      this.httpOptions
+    );
+  }
+
+  getStatisticsBoard(id: string): Observable<any> {
+    return this.http.get(
+      `${environment.URL_API}statistics/1/${id}`,
       this.httpOptions
     );
   }

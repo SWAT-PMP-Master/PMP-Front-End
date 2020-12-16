@@ -10,14 +10,17 @@ import { NavComponent } from './components/nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 
 import { MaterialModule } from './../material/material.module';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [DashboardComponent, ProfileComponent, NavComponent],
-  imports: [CommonModule,
+  imports: [
+    CommonModule,
     DashboardRoutingModule,
     LayoutModule,
     MaterialModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    NgxChartsModule,
   ],
 })
 export class DashboardModule {}
