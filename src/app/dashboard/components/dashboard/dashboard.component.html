@@ -11,12 +11,14 @@
           </mat-card-subtitle> -->
         </mat-card-header>
         <mat-card-content>
-          <h3>Description:</h3>
+          <h2>Description:</h2>
           <p>
             {{ board?.body.desc }}
           </p>
           <p>
-            Number of cards created in trello : {{ statistics?.TotalCards }}
+            <strong>
+              Number of cards created in trello : {{ statistics?.TotalCards }}
+            </strong>
           </p>
         </mat-card-content>
       </mat-card>
