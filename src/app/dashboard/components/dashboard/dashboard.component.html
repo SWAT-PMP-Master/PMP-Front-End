@@ -25,36 +25,44 @@
     </div>
     <div class="col-12 col-lg-6">
       <mat-card>
+        <h1 class="title__table">Members associated with this board</h1>
+        <table class="tables">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Full name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let users of user?.body">
+              <td>{{ users?.username }}</td>
+              <td>{{ users?.fullName }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </mat-card>
+    </div>
+    <div class="col-12">
+      <mat-card class="graphic-container">
         <mat-card-header>
           <mat-card-title> Project status </mat-card-title>
         </mat-card-header>
         <mat-card-content>
-          <ngx-charts-advanced-pie-chart
+          <ngx-charts-pie-chart
+            class="graphic"
             [view]="view"
             [scheme]="colorScheme"
-            [results]="single"
+            [gradient]="gradient"
+            [legend]="showLegend"
+            [legendPosition]="legendPosition"
+            [labels]="showLabels"
+            [doughnut]="isDoughnut"
+            [results]="statistics?.single"
             [gradient]="gradient"
           >
-          </ngx-charts-advanced-pie-chart>
+          </ngx-charts-pie-chart>
         </mat-card-content>
       </mat-card>
-    </div>
-    <div class="col-12 col-lg-6">
-      <h3 class="title__table">Members associated with this board</h3>
-      <table class="tables">
-        <thead>
-          <tr>
-            <th>Username</th>
-            <th>Full name</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let users of user?.body">
-            <td>{{ users?.username }}</td>
-            <td>{{ users?.fullName }}</td>
-          </tr>
-        </tbody>
-      </table>
     </div>
     <!-- <div class="col-12 col-lg-6">
       <mat-card>

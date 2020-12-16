@@ -14,24 +14,6 @@ export class DashboardComponent implements OnInit {
   board: any;
   statistics: any;
 
-  single = [
-    {
-      name: 'Germany',
-      value: 8940000,
-    },
-    {
-      name: 'USA',
-      value: 5000000,
-    },
-    {
-      name: 'France',
-      value: 7200000,
-    },
-    {
-      name: 'UK',
-      value: 6200000,
-    },
-  ];
   view: any[] = [700, 400];
   colorScheme = {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA'],
@@ -40,6 +22,7 @@ export class DashboardComponent implements OnInit {
   showLegend = true;
   showLabels = true;
   isDoughnut = false;
+  legendPosition = 'below';
 
   constructor(
     private boardsService: BoardsService,
@@ -59,7 +42,6 @@ export class DashboardComponent implements OnInit {
         .getStatisticsBoard(this.id)
         .subscribe((statistic: any) => {
           this.statistics = statistic.body;
-          console.log(this.statistics);
         });
     });
   }
